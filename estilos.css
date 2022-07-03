@@ -1,0 +1,598 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.titular {
+  padding: 2vh;
+  background-color: black;
+  color: aliceblue;
+  height: 45px;
+}
+main {
+  flex-grow: 1;
+  background-image: linear-gradient(to top, #050516 40%, #537895 100%);
+  color: #ffffff;
+}
+
+.logo {
+  width: 55px;
+  border-radius: 50%;
+}
+
+.navbar-nav a {
+  font-size: 25px;
+}
+
+/* boton musica*/
+
+.musica {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  padding: 50px;
+}
+
+#playBtn {
+  width: 45px;
+  height: 45px;
+  padding: 5px 2px 5px 6px;
+  border-radius: 100%;
+  box-shadow: -0.1rem -0.1rem 0.3rem #fff, 0.1rem 0.1rem 0.3rem #868686;
+  font-size: 35px;
+  border: none;
+
+  transition: all 0.5s ease-in-out;
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+.bi-play-fill {
+  color: #373434;
+}
+
+#playBtn:active {
+  border-radius: 100%;
+  box-shadow: inset 0px 0px 10px 0px rgb(240, 237, 237);
+}
+
+/*SECCION DE ENCABEZADO*/
+.encabezado {
+  min-height: 90vh;
+  background-color: #f5f7f8;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+}
+
+.content-encabezado {
+  margin: 0 20px;
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.border-perfil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  height: 7rem;
+  width: 7rem;
+
+  border-radius: 50%;
+}
+.content-encabezado,
+.border-perfil {
+  box-shadow: -0.1rem -0.1rem 0.3rem #fff, 0.1rem 0.1rem 0.3rem #868686;
+}
+
+#myImg {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+#myImg:hover {
+  opacity: 0.9;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content,
+#caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.encabezado .content-encabezado h2 {
+  margin-top: 20px;
+  font-size: 5.5vw;
+  font-weight: 600;
+  font-family: "Work Sans", sans-serif;
+  color: #050505;
+}
+.encabezado .content-encabezado p {
+  font-size: 5vw;
+  font-family: "Work Sans", sans-serif;
+  color: #373434;
+}
+.encabezado .content-encabezado .botones-encabezado label {
+  user-select: none;
+  font-size: 15px;
+  font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+  margin: 20px 12px 45px 12px;
+  display: inline-block;
+  padding: 10px 17px;
+  border-radius: 6px;
+  color: #373434;
+  box-shadow: -0.1rem -0.1rem 0.3rem #fff, 0.1rem 0.1rem 0.3rem #868686;
+}
+.encabezado .content-encabezado .botones-encabezado label:active {
+  border-radius: 6px;
+  background: #ecf0f3;
+  box-shadow: inset 7px 7px 14px #c9cccf, inset -7px -7px 14px #ffffff;
+}
+
+/*  SECCION DE BIENVENIDA*/
+.bienvenida {
+  padding-top: 20px;
+  min-height: 90vh;
+  padding: 10px;
+}
+
+.bienvenida img {
+  float: left;
+  width: 170px;
+  height: 160px;
+  object-fit: cover;
+  shape-outside: ellipse(40% 50% at 50% 50%);
+  border-radius: 5px;
+}
+.bienvenida p {
+  user-select: none;
+  text-align: justify;
+  padding: 0 5px;
+  font-family: 'Spline Sans Mono', monospace;
+  font-size: 18px;
+  font-weight: 600;
+  color: #c0c0c0;
+}
+
+.bienvenida .saludo-bienvenida {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 50%;
+  background: none;
+}
+
+.saludo-bienvenida p {
+  font-weight: 600;
+
+  font-size: 20px;
+  text-align: center;
+}
+
+/* Seccion de poemas*/
+
+.seccion-poema {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 18px;
+}
+.contenedor-poema {
+  padding: 10px;
+}
+
+.contenedor-poema img {
+  float: left;
+  width: 150px;
+  height: 145px;
+  object-fit: cover;
+  shape-outside: polygon(
+    91% 1%,
+    89% 9%,
+    89% 15%,
+    88% 24%,
+    86% 31%,
+    86% 40%,
+    87% 48%,
+    87% 54%,
+    87% 64%,
+    88% 70%,
+    91% 75%,
+    98% 76%,
+    97% 84%,
+    93% 90%,
+    88% 99%,
+    4% 99%,
+    2% 2%,
+    5% 1%
+  );
+  padding: 3px;
+}
+.contenedor-poema .espacio-circulo {
+  shape-outside: circle();
+  padding: 2px;
+}
+.contenedor-poema .lado-derecho {
+  float: right;
+}
+.contenedor-poema p {
+  user-select: none;
+  padding: 2px;
+  font-family: 'Spline Sans Mono', monospace;
+  font-size: 20px;
+  font-weight: 600;
+  color: #c0c0c0;
+}
+
+.margenes-carrusel {
+  margin: 20px;
+}
+
+.seccion-final {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  background: #050516;
+}
+.seccion-final img {
+  width: 300px;
+  height: auto;
+  border-radius: 15px;
+}
+.seccion-final ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 0;
+  justify-content: center;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+.seccion-final ul li {
+  user-select: none;
+  text-align: center;
+  list-style-type: none;
+  padding: 2px 5px;
+  font-size: 25px;
+  font-family: 'Spline Sans Mono', monospace;
+  flex-basis: 140px;
+}
+.seccion-final p {
+  user-select: none;
+  margin-top: 5px;
+  border-radius: 10px;
+  padding: 3px 15px;
+  background: linear-gradient(to left, #ac5fdb, #e3a2ee);
+  color: black;
+  text-align: center;
+  font-size: 25px;
+}
+
+/*  SECCION DE GALERIA  */
+/* boton*/
+
+.boton {
+  display: flex;
+  height: 2em;
+  width: 80px;
+  align-items: center;
+  justify-content: center;
+  background-color: #eeeeee4b;
+  border-radius: 3px;
+  letter-spacing: 1px;
+  transition: all 0.2s linear;
+  cursor: pointer;
+  border: none;
+  background: rgba(#ffff, #fff, #f5f7f8, 0.5);
+  position: fixed;
+  top: 50%;
+  right: 2px;
+  bottom: 50px;
+}
+.boton a {
+  text-decoration: none;
+  font-size: 2.5vw;
+  color: #050505;
+}
+.boton > svg {
+  margin-right: 2px;
+  margin-left: 2px;
+  font-size: 2.5vw;
+  transition: all 0.4s ease-in;
+}
+
+.boton:hover > svg {
+  font-size: 1.2em;
+  transform: translateX(-5px);
+}
+
+.boton:hover {
+  box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
+  transform: translateY(-2px);
+}
+
+.container-galeria {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f7f7f7;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 90px;
+}
+.content-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.content-section .card-galeria {
+  flex: 1 0 300px;
+  margin: 20px 20px;
+  box-shadow: 0px 5px 10px 0px rgb(0, 0, 0, 0.5);
+  border-radius: 8px;
+  background: linear-gradient(#b3ebff, #fbc2eb);
+}
+.content-section .card-galeria img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px 8px 2px 2px;
+}
+.content-section .card-galeria h2 {
+  margin: 15px 0px;
+  font-size: 20px;
+  color: #1662a1;
+  font-family: sans-serif;
+}
+.content-section .card-galeria p {
+  user-select: none;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 0px 10px;
+  margin-bottom: 20px;
+  font-family: sans-serif;
+}
+
+/*TABLET*/
+@media (min-width: 576px) {
+  /* Encabezado*/
+  .encabezado .content-encabezado {
+    margin: 0 30px;
+    border-radius: 8px;
+  }
+  .encabezado .content-encabezado h2 {
+    margin-top: 20px;
+  }
+
+  .encabezado .content-encabezado .botones-encabezado label {
+    font-size: 20px;
+
+    margin: 20px 12px 45px 12px;
+
+    padding: 10px 17px;
+  }
+
+  .content-section .card-galeria {
+    flex: 1 0 300px;
+  }
+
+  /*boton*/
+  .boton {
+    display: flex;
+    height: 3em;
+    width: 100px;
+
+    top: 50%;
+    right: 2px;
+    bottom: 50px;
+  }
+  .boton a {
+    font-size: 2.5vw;
+  }
+  .boton > svg {
+    margin-right: 2px;
+    margin-left: 2px;
+    font-size: 25px;
+  }
+
+  .boton:hover > svg {
+    font-size: 1.2em;
+    transform: translateX(-5px);
+  }
+  .modal-content {
+    width: 100%;
+  }
+}
+
+/*laptop*/
+@media (min-width: 768px) {
+  /* Encabezado*/
+  .encabezado .content-encabezado {
+    margin: 0 100px;
+    border-radius: 8px;
+  }
+  .encabezado .content-encabezado h2 {
+    margin-top: 20px;
+    font-size: 37px;
+  }
+  .encabezado .content-encabezado p {
+    font-size: 28px;
+  }
+  .encabezado .content-encabezado .botones-encabezado label {
+    font-size: 25px;
+
+    margin: 20px 12px 45px 12px;
+
+    padding: 17px 25px;
+  }
+
+  /*boton*/
+  .boton {
+    height: 3em;
+    width: 100px;
+
+    top: 50%;
+    right: 2px;
+    bottom: 50px;
+  }
+  .boton a {
+    font-size: 1.5vw;
+  }
+  .boton > svg {
+    font-size: 30px;
+  }
+  .espacio-carrucel {
+    padding: 20px;
+    width: 50vw;
+    margin: auto;
+  }
+
+  .espacio-carrucel .carousel-inner,
+  img {
+    border-radius: 15px;
+  }
+
+  .bienvenida {
+    min-height: 60vh;
+  }
+  
+
+  .seccion-poema {
+    min-height: 40vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 18px;
+  }
+  .seccion-final {
+    min-height: 50vh;
+  }
+  .encabezado .content-encabezado .botones-encabezado label {
+    user-select: none;
+    margin: 20px 12px 80px 12px;
+  }
+}
+@media (min-width: 992px) {
+  .encabezado {
+    min-height: 120vh;
+  }
+  .border-perfil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    height: 8rem;
+    width: 8rem;
+
+    border-radius: 50%;
+  }
+  #myImg {
+    width: 120px;
+    height: 120px;
+
+    border-radius: 50%;
+    transition: 0.3s;
+  }
+  .modal-content {
+    width: 60%;
+  }
+}
